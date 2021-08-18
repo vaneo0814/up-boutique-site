@@ -5,6 +5,10 @@ const navItems = [
     path: '/about',
     label: 'About',
   },
+  {
+    path: '/blog',
+    label: 'Blog',
+  },
 ];
 
 const Header = () => {
