@@ -1,22 +1,34 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { getPostList } from '../utils/posts';
+import PostList from '../components/PostList';
 
-const Home = () => {
-  return (
-    <>
-      <Head>
-        <title>UP Boutique</title>
-      </Head>
-      <div className='page-wrapper'>
-      <Header />
-        <main>
-          <h2>Hello from UP Boutique!</h2>
-        </main>
-        <Footer/>
-      </div>
-    </>
-  );
-};
+
+const Home = ({ postList }) => {
+    return (
+      <>
+        <Head>
+          <title>UP Boutique</title>
+        </Head>
+        <div className='page-wrapper'>
+          <Header />
+          <main>
+          <PostList posts={postList} />
+          </main>
+          <Footer />
+        </div>
+      </>
+    );
+  };
+
+export const getStaticProps = () => {
+    const postList = getPostList();
+    return {
+      props: {
+        postList,
+      },
+    };
+  };
 
 export default Home;
