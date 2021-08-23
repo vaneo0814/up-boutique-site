@@ -12,7 +12,8 @@ const Blog = ({ postList }) => {
                 <title>Blog // UP Boutique</title>
             </Head>
             <div className='page-wrapper'>
-                <Header />
+                <Header bgImage="/images/featured-1.png" />
+
                 <main>
                     <PostList posts={postList} />
                 </main>

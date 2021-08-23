@@ -14,11 +14,14 @@ const navItems = [
     },
 ];
 
-const Header = () => {
+const Header = ({ bgImage }) => {
     const router = useRouter();
 
     return (
-        <header className={styles.header}>
+        <header
+            className={styles.header}
+            style={bgImage && { backgroundImage: `url(${bgImage})` }}
+        >
             <div className={styles['header-wrapper']}>
                 <Link href="/">
                     <a className={styles['header-logo']}>UP</a>
@@ -27,16 +30,15 @@ const Header = () => {
                 <nav className={styles['header-nav']}>
                     {navItems.map(({ path, label }) => (
                         <Link key={path} href={path}>
-                        <a
-                          className={`${styles['header-link']} ${
-                            router && router.pathname.includes(path)
-                              ? styles['header-link-active']
-                              : ''
-                          }`}
-                        >
-                          {label}
-                        </a>
-                      </Link>
+                            <a
+                                className={`${styles['header-link']} ${router && router.pathname.includes(path)
+                                        ? styles['header-link-active']
+                                        : ''
+                                    }`}
+                            >
+                                {label}
+                            </a>
+                        </Link>
                     ))}
                 </nav>
             </div>

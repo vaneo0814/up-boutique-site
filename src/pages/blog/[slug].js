@@ -11,7 +11,7 @@ const BlogPost = ({ postData }) => {
                 <title>{postData.postTitle} // UP Boutique</title>
             </Head>
             <div className='page-wrapper'>
-                <Header bgImage={postData.featuredImage.url} />
+                <Header bgImage={postData.featuredImage} />
                 <main>
                     <SinglePost post={postData} />
                 </main>

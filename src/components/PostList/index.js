@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './postList.module.css';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 
 // the default array set to the posts prop = [] If nothing is passed in at all, 
@@ -15,14 +15,14 @@ const PostList = ({ posts = [] }) => {
                         <div key={slug} className={styles['post-item']}>
                             <Link href={`/blog/${slug}`}>
                                 <div className={styles['post-image-wrapper']}>
-                                    <Image
+                                    {/* <Image
                                         className={styles['post-image']}
                                         src={featuredImage}
                                         alt={`Featured image for ${postTitle}`}
                                         layout="fill"
                                         objectFit="cover"
                                         objectPosition="center"
-                                    />
+                                    /> */}
                                 </div>
                             </Link>
                             <div className={styles['post-data']}>
@@ -42,6 +42,5 @@ const PostList = ({ posts = [] }) => {
     );
 };
 
-console.log(featuredImage);
 
 export default PostList;
