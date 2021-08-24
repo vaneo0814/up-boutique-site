@@ -13,6 +13,8 @@
   "author": "vaneo0814 <vorellana814@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.5.0",
     "gray-matter": "^4.0.3",
     "next": "^11.1.0",
     "react": "^17.0.2",
