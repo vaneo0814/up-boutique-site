@@ -16,6 +16,7 @@
     "graphql": "^15.5.1",
     "graphql-request": "^3.5.0",
     "gray-matter": "^4.0.3",
+    "mailgun-js": "^0.22.0",
     "next": "^11.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
