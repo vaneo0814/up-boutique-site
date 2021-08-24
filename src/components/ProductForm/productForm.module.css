@@ -1,0 +1,27 @@
+.form-label {
+    display: block;
+    margin: 12px 0;
+  }
+  
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+  
+  .form-btn {
+    border-radius: none;
+    border: none;
+    font-size: 1.5rem;
+    outline: none;
+    padding: 8px 20px;
+    background-color: var(--primary-300);
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .form-btn:hover {
+    background-color: var(--primary-500);
+    color: var(--primary-300);
+  }
+  
